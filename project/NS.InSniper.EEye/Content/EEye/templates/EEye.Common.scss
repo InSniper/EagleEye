@@ -1,0 +1,131 @@
+$boder-color: #c5c5c5;
+$boder-color-hover:  #a99f9a;
+
+
+// /////////////////////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Applied to the widget wrapper to set a border, text and background color. 
+// In addition to t-widget, every widget has its own specific CSS class, for example eeye-menu, eeye-panelbar, eeye-tabstrip, etc.
+.eeye-widget {
+    
+}
+
+// applied to Grid headers, Menu top level items, PanelBar top level items, TabStrip items, DropDownLists, to set a background image and a background color
+.eeye-header {
+    
+} 
+
+// applied to hyperlinks and clickable text items to set a text color
+.eeye-link {
+    
+}
+
+// applied to elements that should look like push buttons. The class sets a text color, background color, background image and hover styling. This is the recommended *class for styling *form buttons
+.eeye-button {
+    
+}
+
+// but used for standalone (generic) input elements that are not part of widget. This is the recommended *class for styling user form input elements* as it provides the same look, height and vertical alignment as the Kendo UI input widgets
+.eeye-input {
+}
+
+input:not([type]).eeye-input, input[type=text].eeye-input, textarea.eeye-input{
+  background-color: #fff;
+  color: #2e2e2e;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border-color: $boder-color;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: visible;
+  vertical-align: middle;
+  font-size: 100%;
+  font-family: inherit;
+  border-style: solid;
+  border-width: 1px;
+  padding: 2px .3em;
+  height: 2.12em;
+  line-height: 1.6em;
+  width: 12.4em;    
+
+  &:hover{
+	border-color: $boder-color-hover;
+  }
+}
+
+// same as eeye-input, applied to textboxes inside input widgets like ComboBox and AutoComplete to set border, text and background color
+.eeye-textbox {
+    
+}
+
+// applied to various containers to set a background and border color
+.eeye-group, eeye-content {
+    
+} 
+
+// applied to popup containers that are detached from their opener component and are placed in the body element
+.eeye-popup {
+    
+}
+
+// applied to elements that display part of a sprite image as background to init their dimensions
+.eeye-icon, eeye-sprite {
+    
+}
+
+// applied to inline images to set their dimensions
+.eeye-image {
+    
+}
+
+// applied to various repeating widget items, e.g. in the Menu, TabStrip, TreeView, PanelBar, ComboBox, DropDownList, etc. This CSS class does not apply any particular global styles and sports display: block.
+.eeye-item {
+    
+}
+
+// set on first and last eeye-item respectively, where special styling is needed - rounded corners, removing borders
+.eeye-first, .eeye-last {
+    
+}
+
+// /////////////////////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////
+// The appearance of a component may also depend on its state, which is also tied to CSS classes:
+// /////////////////////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// this class is applied on items to set their default appearance background and colors
+.eeye-state-default {
+    
+}
+
+// this class is set to items when they are hovered to apply their hovered look
+.eeye-state-hover {
+                            
+}
+
+// this class is applied on focused mostly input elements (plus DropDownList)
+.eeye-state-focused {
+                          
+}
+
+// a class set on activated eeye-link elements
+.eeye-state-active {
+    
+}
+
+// selected items receive this class to apply their selected look, like in PanelBar and TabStrip
+.eeye-state-selected{
+}
+
+// this class is set on disabled items
+.eeye-state-disabled {
+}

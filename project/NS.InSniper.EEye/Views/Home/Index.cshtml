@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                To learn more about ASP.NET MVC visit
+                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
+                If you have any questions about ASP.NET MVC visit
+                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
+            </p>
+        </div>
+    </section>
+}
+    <input class="eeye-input" />
+    <input class="eeye-input" />
+    <div id="cc">
+    </div>
+    <div id="dd">
+    </div>
+    <div id="ee">
+    </div>
+<script type="text/javascript">
+    define('EEye.Page.InitialModel', ['EEye.Models'], function (models) {
+        var collection = new models.Collection([{ id: 1, text: 'nima' }, { id: 2, text: 'shahr', isSelected: true }]);
+        var model = new models.Model({ title: 'asdadadad' });
+
+        var initialModel = { model: model, collection: collection };
+        return (initialModel);
+    });
+    require(['jquery', 'underscore', 'EEye.Page.InitialModel', 'EEye.Models', 'EEye.List', 'EEye.CheckBox', 'EEye.ComboBox'], function ($, _, initialModel, models) {
+        $(document).ready(function () {
+            var views = namespace('EEye.Views');
+            var d = new views.CheckBoxList({ collection: initialModel.collection, model: initialModel.model, template: { textField: 'title' } });
+            var c = new views.ComboBox({ collection: initialModel.collection, model: initialModel.model, template: { textField: 'title' } });
+            var e = new views.List({ collection: initialModel.collection, model: new models.Model({ title: 'asdadadad' }), template: { textField: 'title' } });
+
+            $('#cc').html(c.render().$el);
+            $('#dd').html(d.render().$el);
+            $('#ee').html(e.render().$el);
+
+            setTimeout(function () {
+                initialModel.collection.add({ id: 3, text: 'nima', isSelected: true });
+                initialModel.collection.at(0).set('text', 'ddddddddddddddd');
+            }, 500);
+
+            setTimeout(function () {
+                initialModel.collection.at(1).set('text', gg());
+            }, 200);
+        });
+    });
+</script>
+
