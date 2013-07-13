@@ -123,7 +123,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NS.InSniper.EagleEye\NS.InSniper.EEye.csproj">
+    <ProjectReference Include="..\NS.InSniper.EEye\NS.InSniper.EEye.csproj">
       <Project>{7BE4AF54-3073-40D6-8330-2F0B6C279A35}</Project>
       <Name>NS.InSniper.EEye</Name>
     </ProjectReference>

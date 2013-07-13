@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "CheckBox";
+}
+
+<h2>Toggle</h2>
+<div  id='container'>
+    <div id="CheckBoxListSample1">
+    </div>
+    <p id="CheckBoxListSelection1"></p>
+    <ul id="CheckBoxListSample2">
+    </ul>
+    <p id="CheckBoxListSelection2"></p>
+    <ul id="CheckBoxListSample3">
+    </ul>
+    <p id="CheckBoxListSelection3"></p>
+
+    <a class="eeye-button" id="button1">Update Header</a>
+    <a class="eeye-button" id="button2">Update Collection's Model</a>
+    <a class="eeye-button" id="button3">Adding Model to Collection</a>
+    <a class="eeye-button" id="button4">Selecting item by javascript</a>
+</div>
+<script type="text/javascript">
+    require(['jquery', 'underscore', 'EEye.Base', 'EEye.Models', 'EEye.CheckBox'], function ($, _, base, models, views) {
+        $(document).ready(function () {
+            var collectionSample1 = new models.Collection([{ id: 1, text: 'Text Sample 1' }, { id: 2, text: 'Text Sample 2' }]);
+            var modelSample1 = new models.Model({ title: 'Header 1' });
+
+            var collectionSample2 = new models.Collection([{ id: 1, title: 'Title Sample 1' }, { id: 2, title: 'Title Sample 2' }, { id: 3, title: 'Title Sample 3' }]);
+            var modelSample2 = new models.Model({ title: 'Header 2' });
+
+            var checkBox1 = new views.CheckBoxList({ collection: collectionSample1 });
+            $('#CheckBoxListSample1').html(checkBox1.render().$el);
+            checkBox1.on('CheckBoxList:change', function () {
+                var selected = [];
+                _.each(checkBox1.value(), function(model) { selected.push(model.get('text')); });
+                $('#CheckBoxListSelection1').text(selected);
+            });
+
+            $('#container').find('>ul').CheckBoxList({ collection: collectionSample2, model: modelSample2, templateInfo: { textField: 'title' }, itemViewOptions: { templateInfo: { textField: 'title' } } });
+            var checkbox2 = $('#container').find('>ul').CheckBoxList()[0];
+            checkbox2.on('CheckBoxList:change', function (view) {
+                var selected = [];
+                _.each(checkbox2.value(), function (model) { selected.push(model.get('title')); });
+                $('#CheckBoxListSelection2').text(selected);
+            });
+
+            var checkbox3 = $('#container').find('>ul').CheckBoxList()[1];
+            checkbox3.on('CheckBoxList:change', function (view) {
+                var selected = [];
+                _.each(checkbox3.value(), function (model) { selected.push(model.get('title')); });
+                $('#CheckBoxListSelection3').text(selected);
+            });
+
+            $('#button1').click(function() {
+                modelSample2.set('title', 'Updated titles '+ Math.floor((Math.random()*100)+1));
+            });
+
+            $('#button2').click(function () {
+                var model2 = collectionSample2.at(collectionSample2.length-1);
+                model2.set('title', 'Updated titles ' + Math.floor((Math.random() * 100) + 1));
+                
+                var model1 = collectionSample1.at(collectionSample1.length-1);
+                model1.set('text', 'Updated titles ' + Math.floor((Math.random() * 100) + 1));
+            });
+
+            $('#button3').click(function () {
+                var model = new models.Model({ id: collectionSample2.length +1, title: 'Text Sample ' + Math.floor((Math.random() * 100) + 1) });
+                collectionSample2.add(model);
+            });
+
+            $('#button4').click(function () {
+                checkbox3.addValue(collectionSample2.at(0));
+            });
+
+            //d.addValue(d.collection.at(0));
+            //d.addSelect(d.collection.at(0));
+            //d.addSelect(d.collection.at(1));
+            //d.removeSelect(d.collection.at(1));
+            //$('#cc').CheckBoxList({ collection: initialModel.collection, model: initialModel.model, templateInfo: { textField: 'title' } });
+
+            //setTimeout(function() {
+            //    $('#dd').find('ul').CheckBoxList().collection.add({ id: 3, familyname: 'nima222222222222222', isSelected: true });
+            //    initialModel.collection.at(0).set('familyname', 'ddddddddddddddd');
+            //}, 500);
+
+            //setTimeout(function () {
+            //    $('#dd').find('ul').data('eeye-instance').collection.at(1).set('familyname', 'JJJJJJJJJJJJJJJJJJJ');
+            //    initialModel.model.set('title', 'hi');
+            //}, 200);
+        });
+    });
+</script>
+

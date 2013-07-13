@@ -92,7 +92,7 @@
                 var value = this.value();
                 value.push(view.model);
                 this.$el.data('value', value);
-                this.triggerMethod('CheckBoxList:change', view.Model);
+                this.triggerMethod('CheckBoxList:change');
             }
         },
         _onItemViewCheckBoxUnchecked: function(view) {
@@ -100,7 +100,7 @@
                 var value = this.value();
                 value = _.reject(value, function(model) { return model == view.model; });
                 this.$el.data('value', value);
-                this.triggerMethod('CheckBoxList:change', view.Model);
+                this.triggerMethod('CheckBoxList:change');
             }
         },
         _onItemRemoved: function(view) {

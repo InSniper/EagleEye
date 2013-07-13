@@ -174,6 +174,18 @@
     <Content Include="Content\EEye\EEye.Views.js" />
     <Content Include="Content\EEye\EEye.Checkbox.js" />
     <Content Include="Content\EEye\EEye.Configs.js" />
+    <Content Include="Content\EEye\templates\EEye.CheckBox.css">
+      <DependentUpon>EEye.CheckBox.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\EEye\templates\EEye.ComboBox.css">
+      <DependentUpon>EEye.ComboBox.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\EEye\templates\EEye.Common.css">
+      <DependentUpon>EEye.Common.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\EEye\templates\EEye.Core.css">
+      <DependentUpon>EEye.Core.scss</DependentUpon>
+    </Content>
     <Content Include="Content\Lib\bootstrap\img\glyphicons-halflings-white.png" />
     <Content Include="Content\Lib\bootstrap\img\glyphicons-halflings.png" />
     <Content Include="Content\Lib\bootstrap\js\bootstrap-alert.js" />
@@ -381,7 +393,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="packages.config" />
-    <Content Include="Views\Home\Toggle.cshtml" />
+    <Content Include="Views\Home\CheckBox.cshtml" />
     <Content Include="Content\EEye\Docs\Template.md" />
   </ItemGroup>
   <ItemGroup>
