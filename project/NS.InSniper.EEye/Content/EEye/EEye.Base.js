@@ -1,9 +1,9 @@
 ﻿define([], function () {
-    "option explicit";
+    'use strict';
 
     var eEye = window.EEye = window.EEye || {};
-   
-    var namespace = function(ns) {
+    
+    var namespace = function (ns) {
         var parts = ("" + ns).split('.'),
             parent = eEye;
 

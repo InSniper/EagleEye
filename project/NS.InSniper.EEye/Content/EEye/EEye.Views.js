@@ -1,6 +1,5 @@
 ﻿define(['backbone.marionette', 'knockback', 'EEye.Base', 'EEye.Configs', 'EEye.Templates'], function (marionette, kb, base, configs, templates) {
     'use strict';
-    "option explicit";
 
     var views = base.namespace('EEye.Views');
 
@@ -32,6 +31,8 @@
                 // pass all arguments, except the event name
                 return method.apply(this, _.tail(arguments));
             }
+
+            return;
         };
 
         return triggerMethod;
@@ -55,7 +56,7 @@
         initialize: function () {
             marionette.ItemView.prototype.initialize.call(this, arguments);
         },
-        _initializeOptions:function(options) {
+        _initializeOptions: function(options) {
             options = _.merge({}, this.defaultConfig, options);
             options.templateInfo = _.extend({}, configs.templateInfo, options.templateInfo);
             options.template = templates.RegisterTemplate(options.templateInfo);
@@ -184,6 +185,7 @@
     });
 
     views.CompositeView = marionette.CompositeView.extend({
+        itemViewEventPrefix: 'ItemView',
         constructor: function (options) {
             //var args = Array.prototype.slice.apply(arguments);
 

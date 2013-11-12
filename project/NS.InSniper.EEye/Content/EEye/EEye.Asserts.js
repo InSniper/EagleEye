@@ -1,9 +1,10 @@
 ﻿define(['EEye.Base'], function (base) {
-    "option explicit";
+    'use strict';
 
     var asserts = base.namespace('EEye.Asserts');
 
     asserts.NotNull = function (arg) {
+        return arg ? true : false;
     };
 
     asserts.throwError = function (message, name) {
@@ -12,6 +13,5 @@
         throw error;
     };
 
-
-    return (asserts);
+    return asserts;
 });

@@ -163,6 +163,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Lib\bootstrap\styles\bootstrap-theme.css" />
+    <Content Include="Content\Lib\bootstrap\styles\bootstrap-theme.min.css" />
+    <Content Include="Content\Lib\bootstrap\styles\bootstrap.css" />
+    <Content Include="Content\Lib\bootstrap\styles\bootstrap.min.css" />
     <Content Include="Content\EEye\EEye.ComboBox.js" />
     <Content Include="Content\EEye\EEye.JQuery.js" />
     <Content Include="Content\EEye\EEye.List.js" />
@@ -186,35 +190,6 @@
     <Content Include="Content\EEye\templates\EEye.Core.css">
       <DependentUpon>EEye.Core.scss</DependentUpon>
     </Content>
-    <Content Include="Content\Lib\bootstrap\img\glyphicons-halflings-white.png" />
-    <Content Include="Content\Lib\bootstrap\img\glyphicons-halflings.png" />
-    <Content Include="Content\Lib\bootstrap\js\bootstrap-alert.js" />
-    <Content Include="Content\Lib\bootstrap\js\bootstrap-button.js" />
-    <Content Include="Content\Lib\bootstrap\js\bootstrap-carousel.js" />
-    <Content Include="Content\Lib\bootstrap\js\bootstrap-collapse.js" />
-    <Content Include="Content\Lib\bootstrap\js\bootstrap-dropdown.js" />
-    <Content Include="Content\Lib\bootstrap\js\bootstrap-modal.js" />
-    <Content Include="Content\Lib\bootstrap\js\bootstrap-popover.js" />
-    <Content Include="Content\Lib\bootstrap\js\bootstrap-scrollspy.js" />
-    <Content Include="Content\Lib\bootstrap\js\bootstrap-tab.js" />
-    <Content Include="Content\Lib\bootstrap\js\bootstrap-tooltip.js" />
-    <Content Include="Content\Lib\bootstrap\js\bootstrap-transition.js" />
-    <Content Include="Content\Lib\bootstrap\js\bootstrap-typeahead.js" />
-    <Content Include="Content\Lib\bootstrap\js\tests\index.html" />
-    <Content Include="Content\Lib\bootstrap\js\tests\unit\bootstrap-alert.js" />
-    <Content Include="Content\Lib\bootstrap\js\tests\unit\bootstrap-button.js" />
-    <Content Include="Content\Lib\bootstrap\js\tests\unit\bootstrap-collapse.js" />
-    <Content Include="Content\Lib\bootstrap\js\tests\unit\bootstrap-dropdown.js" />
-    <Content Include="Content\Lib\bootstrap\js\tests\unit\bootstrap-modal.js" />
-    <Content Include="Content\Lib\bootstrap\js\tests\unit\bootstrap-popover.js" />
-    <Content Include="Content\Lib\bootstrap\js\tests\unit\bootstrap-scrollspy.js" />
-    <Content Include="Content\Lib\bootstrap\js\tests\unit\bootstrap-tab.js" />
-    <Content Include="Content\Lib\bootstrap\js\tests\unit\bootstrap-tooltip.js" />
-    <Content Include="Content\Lib\bootstrap\js\tests\unit\bootstrap-transition.js" />
-    <Content Include="Content\Lib\bootstrap\js\tests\unit\bootstrap-typeahead.js" />
-    <Content Include="Content\Lib\bootstrap\js\tests\vendor\jquery.js" />
-    <Content Include="Content\Lib\bootstrap\js\tests\vendor\qunit.css" />
-    <Content Include="Content\Lib\bootstrap\js\tests\vendor\qunit.js" />
     <Content Include="Content\Lib\google-code-prettify\prettify.css" />
     <Content Include="Content\Lib\google-code-prettify\prettify.js" />
     <Content Include="Content\EEye\EEye.Base.js" />
@@ -238,10 +213,6 @@
     <Content Include="Content\Lib\Knockback\lib\knockback-statistics.min.js" />
     <Content Include="Content\Lib\Knockback\lib\knockback-triggering.js" />
     <Content Include="Content\Lib\Knockback\lib\knockback-triggering.min.js" />
-    <Content Include="Content\Lib\LoDash\lodash.js" />
-    <Content Include="Content\Lib\LoDash\lodash.min.js" />
-    <Content Include="Content\Lib\LoDash\lodash.underscore.js" />
-    <Content Include="Content\Lib\LoDash\lodash.underscore.min.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -297,44 +268,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="Content\Lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Lib\bootstrap\less\wells.less" />
-    <Content Include="Content\Lib\bootstrap\less\variables.less" />
-    <Content Include="Content\Lib\bootstrap\less\utilities.less" />
-    <Content Include="Content\Lib\bootstrap\less\type.less" />
-    <Content Include="Content\Lib\bootstrap\less\tooltip.less" />
-    <Content Include="Content\Lib\bootstrap\less\thumbnails.less" />
-    <Content Include="Content\Lib\bootstrap\less\tables.less" />
-    <Content Include="Content\Lib\bootstrap\less\sprites.less" />
-    <Content Include="Content\Lib\bootstrap\less\scaffolding.less" />
-    <Content Include="Content\Lib\bootstrap\less\responsive.less" />
-    <Content Include="Content\Lib\bootstrap\less\reset.less" />
-    <Content Include="Content\Lib\bootstrap\less\progress-bars.less" />
-    <Content Include="Content\Lib\bootstrap\less\popovers.less" />
-    <Content Include="Content\Lib\bootstrap\less\pagination.less" />
-    <Content Include="Content\Lib\bootstrap\less\pager.less" />
-    <Content Include="Content\Lib\bootstrap\less\navs.less" />
-    <Content Include="Content\Lib\bootstrap\less\navbar.less" />
-    <Content Include="Content\Lib\bootstrap\less\modals.less" />
-    <Content Include="Content\Lib\bootstrap\less\mixins.less" />
-    <Content Include="Content\Lib\bootstrap\less\layouts.less" />
-    <Content Include="Content\Lib\bootstrap\less\labels.less" />
-    <Content Include="Content\Lib\bootstrap\less\hero-unit.less" />
-    <Content Include="Content\Lib\bootstrap\less\grid.less" />
-    <Content Include="Content\Lib\bootstrap\less\forms.less" />
-    <Content Include="Content\Lib\bootstrap\less\dropdowns.less" />
-    <Content Include="Content\Lib\bootstrap\less\component-animations.less" />
-    <Content Include="Content\Lib\bootstrap\less\code.less" />
-    <Content Include="Content\Lib\bootstrap\less\close.less" />
-    <Content Include="Content\Lib\bootstrap\less\carousel.less" />
-    <Content Include="Content\Lib\bootstrap\less\buttons.less" />
-    <Content Include="Content\Lib\bootstrap\less\button-groups.less" />
-    <Content Include="Content\Lib\bootstrap\less\breadcrumbs.less" />
-    <Content Include="Content\Lib\bootstrap\less\bootstrap.less" />
-    <Content Include="Content\Lib\bootstrap\less\badges.less" />
-    <Content Include="Content\Lib\bootstrap\less\alerts.less" />
-    <Content Include="Content\Lib\bootstrap\less\accordion.less" />
-    <Content Include="Content\Lib\bootstrap\js\README.md" />
     <Content Include="Content\EEye\EEye.Models.js" />
     <Content Include="Content\EEye\templates\EEye.CheckBox.scss" />
     <Content Include="Content\EEye\resources\dark-check-green.png" />
@@ -343,16 +278,7 @@
     <Content Include="Content\EEye\templates\EEye.Core.scss" />
     <Content Include="Content\EEye\templates\EEye.Common.scss" />
     <Content Include="Content\EEye\Docs\CheckBox.md" />
-    <None Include="Content\Lib\JQuery\jquery-1.7.2.intellisense.js" />
-    <Content Include="Content\Lib\Backbone\backbone.js" />
-    <Content Include="Content\Lib\Backbone\backbone.min.js" />
-    <Content Include="Content\Lib\JQuery\jquery-1.7.2.js" />
-    <Content Include="Content\Lib\JQuery\jquery-1.7.2.min.js" />
     <Content Include="Content\Lib\Mustache\mustache.js" />
-    <Content Include="Content\Lib\Underscore\underscore.js" />
-    <Content Include="Content\Lib\Underscore\underscore.min.js" />
-    <Content Include="Content\Lib\RequireJS\r.js" />
-    <Content Include="Content\Lib\RequireJS\require.js" />
     <Content Include="Content\Lib\typings\backbone\backbone.d.ts" />
     <Content Include="Content\Lib\typings\jquery\jquery.d.ts" />
     <Content Include="Content\Lib\typings\knockback\knockback.d.ts" />
@@ -362,8 +288,42 @@
     <Content Include="Content\Lib\typings\requirejs\require.d.ts" />
     <Content Include="Content\Lib\typings\underscore\underscore-typed.d.ts" />
     <Content Include="Content\Lib\typings\underscore\underscore.d.ts" />
+    <Content Include="Content\Lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\Lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\Lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Content\Lib\JQuery\jquery-1.9.1.intellisense.js" />
+    <Content Include="Content\Lib\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\Lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\Lib\JQuery\jquery-1.9.1.js" />
+    <Content Include="Content\Lib\JQuery\jquery-1.9.1.min.js" />
+    <Content Include="Content\Lib\Backbone\backbone.js" />
     <Content Include="Content\Lib\Backbone.Marionette\backbone.marionette.js" />
     <Content Include="Content\Lib\Backbone.Marionette\backbone.marionette.min.js" />
+    <Content Include="Content\Lib\Backbone\backbone.min.js" />
+    <Content Include="Content\Lib\LoDash\lodash.js" />
+    <Content Include="Content\Lib\LoDash\lodash.min.js" />
+    <Content Include="Content\Lib\LoDash\lodash.underscore.js" />
+    <Content Include="Content\Lib\LoDash\lodash.underscore.min.js" />
+    <Content Include="Content\Lib\RequireJS\r.js" />
+    <Content Include="Content\Lib\RequireJS\require.js" />
+    <Content Include="Content\Lib\Underscore\underscore.js" />
+    <Content Include="Content\Lib\Underscore\underscore.min.js" />
+    <Content Include="Content\Lib\Knockout\knockout-3.0.0.debug.js" />
+    <Content Include="Content\Lib\Knockout\knockout-3.0.0.js" />
+    <Content Include="Content\Lib\typings\typings\backbone\backbone.d.ts" />
+    <Content Include="Content\Lib\typings\typings\jquery\jquery.d.ts" />
+    <Content Include="Content\Lib\typings\typings\knockout\knockout.amd.d.ts" />
+    <Content Include="Content\Lib\typings\typings\knockout\knockout.d.ts" />
+    <Content Include="Content\Lib\typings\typings\requirejs\require.d.ts" />
+    <Content Include="Content\Lib\typings\typings\underscore\underscore.d.ts" />
+    <Content Include="Scripts\typings\backbone\backbone.d.ts" />
+    <Content Include="Scripts\typings\jquery\jquery.d.ts" />
+    <Content Include="Scripts\typings\knockback\knockback.d.ts" />
+    <Content Include="Scripts\typings\knockout\knockout.amd.d.ts" />
+    <Content Include="Scripts\typings\knockout\knockout.d.ts" />
+    <Content Include="Scripts\typings\mustache\mustache.d.ts" />
+    <Content Include="Scripts\typings\requirejs\require.d.ts" />
+    <Content Include="Scripts\typings\underscore\underscore.d.ts" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -392,15 +352,20 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\Home\CheckBox.cshtml" />
     <Content Include="Content\EEye\Docs\Template.md" />
+    <Content Include="Samples\CheckBox.html" />
+    <Content Include="Content\Lib\JQuery\jquery-1.9.1.min.map" />
+    <Content Include="Content\Lib\Backbone\backbone.min.map" />
+    <Content Include="Content\Lib\Underscore\underscore.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\EEye\scripts\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

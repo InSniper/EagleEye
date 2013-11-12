@@ -26,7 +26,7 @@
             views.ItemView.prototype.initialize.call(this, options);
         },
         events: {
-            'change input[type:checkbox]': 'onChange',
+            'change input:checkbox': 'onChange',
         },
         triggers: {
             //'change input[type:checkbox]': 'CheckBox:change',
@@ -75,7 +75,6 @@
         registeredName: 'CheckBoxList',
         itemView: views.CheckBoxListItem,
         modelView: views.CheckBox,
-        itemViewEventPrefix: 'ItemView',
         defaultConfig: configs.CheckBoxList,
         constructor: function(options) {
             views.CompositeView.prototype.constructor.call(this, options);

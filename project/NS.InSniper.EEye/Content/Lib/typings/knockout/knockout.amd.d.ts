@@ -18,16 +18,16 @@ declare module 'knockout' {
     export var computed: KnockoutComputedStatic;
     export var observableArray: KnockoutObservableArrayStatic;
     export function contextFor(node: any): any;
-    export function isSubscribable(instance: any): bool;
+    export function isSubscribable(instance: any): boolean;
     export function toJSON(viewModel: any, replacer?: Function, space?: any): string;
     export function toJS(viewModel: any): any;
-    export function isObservable(instance: any): bool;
-    export function isComputed(instance: any): bool;
+    export function isObservable(instance: any): boolean;
+    export function isComputed(instance: any): boolean;
     export function dataFor(node: any): any;
-    export function removeNode(node: Element);
-    export function cleanNode(node: Element);
-    export function renderTemplate(template: Function, viewModel: any, options?: any, target?: any, renderMode?: any);
-    export function renderTemplate(template: string, viewModel: any, options?: any, target?: any, renderMode?: any);
+    export function removeNode(node: Element): void;
+    export function cleanNode(node: Element): Element;
+    export function renderTemplate(template: Function, viewModel: any, options?: any, target?: any, renderMode?: any): any;
+    export function renderTemplate(template: string, viewModel: any, options?: any, target?: any, renderMode?: any): any;
 
     //////////////////////////////////
     //// templateSources.js
@@ -44,9 +44,10 @@ declare module 'knockout' {
     //// templateRewriting.js
     ////////////////////////////////////
     export var templateRewriting: {
-        ensureTemplateIsRewritten(template, templateEngine, templateDocument);
-        memoizeBindingAttributeSyntax(htmlString: string, templateEngine: KnockoutTemplateEngine);
-        applyMemoizedBindingsToNextSibling(bindings);
+        ensureTemplateIsRewritten(template: Node, templateEngine: KnockoutTemplateEngine, templateDocument: Document): any;
+        ensureTemplateIsRewritten(template: string, templateEngine: KnockoutTemplateEngine, templateDocument: Document): any;
+        memoizeBindingAttributeSyntax(htmlString: string, templateEngine: KnockoutTemplateEngine): any;
+        applyMemoizedBindingsToNextSibling(bindings: any, nodeName: string): string;
     };
     ////////////////////////////////////
     //// nativeTemplateEngine.js
@@ -61,16 +62,25 @@ declare module 'knockout' {
     ////////////////////////////////////
     export var jqueryTmplTemplateEngine: {
         prototype: KnockoutTemplateEngine;
-        renderTemplateSource(templateSource, bindingContext, options);
+        renderTemplateSource(templateSource: Object, bindingContext: KnockoutBindingContext, options: Object): Node[];
         createJavaScriptEvaluatorBlock(script: string): string;
-        addTemplate(templateName, templateMarkup);
+        addTemplate(templateName: string, templateMarkup: string): void;
     };
     ////////////////////////////////////
     //// templating.js
     ////////////////////////////////////
-    export function setTemplateEngine(templateEngine: KnockoutNativeTemplateEngine);
-    export function renderTemplate(template, dataOrBindingContext, options, targetNodeOrNodeArray, renderMode);
-    export function renderTemplateForEach(template, arrayOrObservableArray, options, targetNode, parentBindingContext);
+    export function renderTemplate(template: Function, dataOrBindingContext: KnockoutBindingContext, options: Object, targetNodeOrNodeArray: Node, renderMode: string): any;
+    export function renderTemplate(template: any, dataOrBindingContext: KnockoutBindingContext, options: Object, targetNodeOrNodeArray: Node, renderMode: string): any;
+    export function renderTemplate(template: Function, dataOrBindingContext: any, options: Object, targetNodeOrNodeArray: Node, renderMode: string): any;
+    export function renderTemplate(template: any, dataOrBindingContext: any, options: Object, targetNodeOrNodeArray: Node, renderMode: string): any;
+    export function renderTemplate(template: Function, dataOrBindingContext: KnockoutBindingContext, options: Object, targetNodeOrNodeArray: Node[], renderMode: string): any;
+    export function renderTemplate(template: any, dataOrBindingContext: KnockoutBindingContext, options: Object, targetNodeOrNodeArray: Node[], renderMode: string): any;
+    export function renderTemplate(template: Function, dataOrBindingContext: any, options: Object, targetNodeOrNodeArray: Node[], renderMode: string): any;
+    export function renderTemplate(template: any, dataOrBindingContext: any, options: Object, targetNodeOrNodeArray: Node[], renderMode: string): any;
+    export function renderTemplateForEach(template: Function, arrayOrObservableArray: Array, options: Object, targetNode: Node, parentBindingContext: KnockoutBindingContext): any;
+    export function renderTemplateForEach(template: any, arrayOrObservableArray: Array, options: Object, targetNode: Node, parentBindingContext: KnockoutBindingContext): any;
+    export function renderTemplateForEach(template: Function, arrayOrObservableArray: KnockoutObservable<Array>, options: Object, targetNode: Node, parentBindingContext: KnockoutBindingContext): any;
+    export function renderTemplateForEach(template: any, arrayOrObservableArray: KnockoutObservable < Array>, options: Object, targetNode: Node, parentBindingContext: KnockoutBindingContext): any;
     export var expressionRewriting: {
         bindingRewriteValidators: any;
     };

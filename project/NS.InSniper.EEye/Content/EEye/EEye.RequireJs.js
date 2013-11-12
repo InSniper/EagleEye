@@ -8,7 +8,7 @@
             'underscore': './lib/lodash/lodash',
             'mustache': './lib/mustache/mustache',
             'json': './lib/marionette/json2',
-            'jquery': './lib/jquery/jquery-1.7.2',
+            'jquery': './lib/jquery/jquery-1.9.1',
             'backbone': './lib/backbone/backbone',
             'backbone.marionette': './lib/backbone.marionette/backbone.marionette',
             'knockback': './lib/knockback/knockback',
